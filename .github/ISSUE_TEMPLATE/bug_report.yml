@@ -1,0 +1,72 @@
+name: Bug Report
+description: Report a bug or issue with the Hermes Agent knowledge base or skills
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - untaldouglas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Information
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see and how it's different from what you expected.
+      render: normal
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Enter the steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      render: normal
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: false
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our knowledge base are you running?
+      options:
+        - main (latest)
+        - v1.0.0
+        - Other (please specify in description)
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: What environment are you experiencing the issue in?
+      options:
+        - Ubuntu/Debian
+        - macOS
+        - Windows (WSL2)
+        - Other (please specify)
+    validations:
+      required: true
